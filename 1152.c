@@ -3,12 +3,15 @@
 #include <string.h>
 int main() {
     int i, j = 1;
-    char str[1000000] = { NULL, };
+    char str[1000000];
     fgets(str, 1000000, stdin);
-    for (i = 0; i <= strlen(str); i++) {
-        printf("%c", str[i]);
-        if (str[i] == 32)
-            j++;
+    if (strlen(str) == 2 && str[0] == 32)
+        j = 0;
+    else {
+        for (i = 1; i < strlen(str)-2; i++) {
+            if (str[i] == 32)
+                j++;
+        }
     }
     printf("%d", j);
 }
