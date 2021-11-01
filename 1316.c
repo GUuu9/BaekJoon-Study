@@ -16,7 +16,7 @@ int main() {
             }
         }
         for (j = 0; j < 26; j++) {
-            if (check[j] == 2)
+            if (check[j] >= 2)
                 break;
             if (j == 25)
                 count++;
