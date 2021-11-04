@@ -15,7 +15,6 @@ int main() {
 			printf("%d/%d", y, x);
 	}
 	else {
-		printf("%d\n", y);
 		if (y % 2 == 0) {
 			num -= count;
 			y -= num;
