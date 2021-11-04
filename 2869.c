@@ -22,20 +22,3 @@ int main() {
 // 나머지 값이 존재할 경우 하루를 더 요구하는 것이므로 1을 추가해준다.
 // 이때 나머지 값은 a 값보다 작은경우 하루를 더 필요로 하고 a보다 큰 경우 바로 올라갈 수 있기 때문에 하루를 추가하지 않는다.
 // 마지막 출력할때, 처음에 제외했던 마지막 날을 더한다.
-/*
-#define _CRT_SECURE_NO_WARNINGS
-#include<stdio.h>
-int main() {
-	int a, b, v, i, locate = 0, day = 0;
-	scanf("%d %d %d", &a, &b, &v);
-	while (1) {
-		day++;
-		locate += a;
-		if (locate >= v)
-			break;
-		locate -= b;
-		printf("%d %d\n", day, locate);
-	}
-	printf("%d", day);
-}*/
-//해당 방법의 경우 값이 커지면 연산하는데 매우 많은 시간을 소모하게된다. 
