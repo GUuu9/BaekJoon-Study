@@ -9,13 +9,26 @@ int main() {
 	}
 	if (count + y == num) {
 		y++;
+		if (y % 2 == 0) 
+			printf("%d/%d", x, y);
+		else 
+			printf("%d/%d", y, x);
 	}
 	else {
-		num -= count;
-		y -= num;
-		x += num;
+		printf("%d\n", y);
+		if (y % 2 == 0) {
+			num -= count;
+			y -= num;
+			x += num;
+			printf("%d/%d", x, y);
+		}
+		else {
+			num -= count;
+			y -= num;
+			x += num;
+			printf("%d/%d", y, x);
+		}
 	}
-	printf("%d/%d", x, y);
 }
 // 1 -> 2 -> 4 -> 7 -> 11 순으로 증가 한 값이 1/1 -> 1/2 -> 1/3 -> 1/4 -> 1/5 순으로 증가한다.
 // 따라서 count에 y값을 증가시켜 해당 값을 저장하고, 분자가 1일 경우의 값을 구해준다.
