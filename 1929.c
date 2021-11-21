@@ -1,4 +1,21 @@
-
+#include<stdio.h>
+int main() {
+	int m, n, sum = 0, i, j, check;
+	scanf("%d\n%d", &m, &n);
+    if(m==1)
+        m=2;
+	for(i=m;i<=n;i++){
+        check=1;
+	    for(j=2;j*j<=i;j++){
+	        if(i%j == 0){
+	        check=0;
+	        break;
+	        }
+	    }
+	    if(check==1)
+	        printf("%d\n", i);
+	}
+}
 
 
 
