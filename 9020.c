@@ -7,7 +7,7 @@ int main() {
         j=n/2;
         a=j;
         b=j;
-        while(1){
+        while(j!=2){
             for(k=2;k*k<=a;k++){
                 if(a%k==0)
                     break;
