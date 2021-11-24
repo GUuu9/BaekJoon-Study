@@ -1,26 +1,20 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 int main() {
-	int testNum, h, w, guest, i, roomf = 0, roomn = 0;
+	int testNum, h, w, guest, i, j, k, roomnum = 0;
 	scanf("%d", &testNum);
 	for (i = 0; i < testNum; i++) {
 		scanf("%d %d %d", &h, &w, &guest);	
-		if (h == 1) {
-			roomf = h;
-			roomn = guest;
+		int room[h*w], num = 0;
+		
+		for(j=1;j<=w;j++){
+		    for(k=1;k<=h;k++){
+		        roomnum = (k*100)+j;
+		        room[num] = roomnum;
+		        num++;
+		    }
 		}
-		else if (h * w == guest) {
-			roomf = h;
-			roomn = w;
-		}
-		else {
-			roomn = guest / h + 1;
-			roomf = guest % h;
-		}
-		if (roomn < 10)
-			printf("%d0%d\n", roomf, roomn);
-		else
-			printf("%d%d\n", roomf, roomn);
+		printf("%d\n", room[guest-1]);
 	}
 }
 /* 
