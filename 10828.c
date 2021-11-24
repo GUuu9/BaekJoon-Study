@@ -35,7 +35,7 @@ void calltop(){
 }
 
 int main() {
-	int task, i, j, value;
+	int task, i, value;
 	char *push = "push", *pop = "pop", *size = "size", *empty = "empty", *top = "top";
 	scanf("%d", &task);
 	
