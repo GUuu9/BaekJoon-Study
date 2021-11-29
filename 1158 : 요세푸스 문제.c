@@ -1,6 +1,6 @@
 #include<stdio.h>
 int main() {
-    int n, k, value, ki, i, check = 0;
+    int n, k, ki, i;
     scanf("%d %d", &n, &k);
     int pp[n];
     for(i=0;i<n;i++){
