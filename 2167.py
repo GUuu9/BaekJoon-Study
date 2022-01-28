@@ -18,3 +18,5 @@ for __ in range(k):
     sum += a[x-1][y-1]
     
     print(sum)
+
+    
